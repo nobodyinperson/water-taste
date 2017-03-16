@@ -1,4 +1,4 @@
-# water taste
+# Water taste
 
 Bottled water doesn't always taste the same. Different brand, different taste.
 I want to know, what mineral causes some waters to taste so strange and bad.
@@ -22,5 +22,5 @@ changes and then file a pull request.
 
 # Contribute plot scripts
 
-Read the `README.md` file under the `scripts` directory.
+Read the [`README.md`](https://github.com/nobodyinperson/water-taste/blob/master/scripts/README.md) file under the [`scripts`](https://github.com/nobodyinperson/water-taste/blob/master/scripts) directory.
 
