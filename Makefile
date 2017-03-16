@@ -12,11 +12,17 @@ PLOTSCRIPTS = $(shell find $(PLOTSCRIPTSDIR) -type f -executable)
 PLOTNAMES = $(basename $(notdir $(PLOTSCRIPTS)))
 
 # the corresponding plot names
-PLOTFILENAMES = $(addsuffix .png, $(addprefix $(PLOTDIR)/, $(PLOTNAMES)))
+PLOTFILES = $(addsuffix .png, $(addprefix $(PLOTDIR)/, $(PLOTNAMES)))
 
 .PHONY: all
-all:
-	@echo $(PLOTFILENAMES)
+all: $(PLOTFILES)
 
-%.png: % $(DATAFILE)
-	echo $<
+# make one single plot
+$(PLOTFILES): $(PLOTDIR)/%.png : $(PLOTSCRIPTSDIR)/% $(DATAFILE)
+	@echo "### $(notdir $<) output: ###"
+	cd $(dir $@) && $(realpath $<) $(realpath $(DATAFILE)) $(abspath $@)
+	@echo "### $(notdir $<) output end ###"
+
+.PHONY: clean
+clean:
+	rm -f $(PLOTDIR)/*.png
