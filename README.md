@@ -11,13 +11,14 @@ or the plot scripts change, simply run `make` again.
 
 ## Dependencies
 
-The dependencies to create the plots (e.g. programming languages needed) are specified in the `.travis.yml` file.
+The dependencies to create the plots (e.g. programming languages needed) are 
+specified in the `.travis.yml` file.
 
 # Data
 
-The data is stored under the `data` folder in a `.csv`-file. All units are in
-`mg/l`. The `taste` is unitless and has a range from `0` (bad) to `10` (good).
-Name your personal taste column `taste_USERNAME`.
+The data is stored under the `data` folder in a `.csv`-file. All mineral 
+units are `mg/l`. The `taste` is unitless and has a range from `0` (bad)
+to `10` (good). Name your personal taste column `taste_USERNAME`.
 
 # Contribute data
 
