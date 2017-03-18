@@ -29,6 +29,12 @@ all: $(PLOTFILES)
 # create rules for all PLOTFILES
 $(foreach _, $(PLOTFILES), $(eval $(call create_plot_rule,$_)))
 
+# sanity tests
+test: all
+	for file in $(PLOTFILES);do \
+		if ! test -e $$file;then exit 1;fi;\
+	done
+
 .PHONY: clean
 clean:
 	rm -f $(PLOTDIR)/*.png

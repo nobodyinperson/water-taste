@@ -3,4 +3,4 @@ before_install:
     - sudo apt-get -qq update
     - sudo apt-get -y install r-base
 script:
-    - make
+    - make test
