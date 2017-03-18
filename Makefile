@@ -6,9 +6,9 @@ DATADIR = data
 DATAFILENAME = water.csv
 DATAFILE = $(addprefix $(DATADIR)/, $(DATAFILENAME))
 
+PLOTSCRIPTS_FIND_CMD = find $(PLOTSCRIPTSDIR) -maxdepth 1 -type f -executable
 # executable plotscripts
-PLOTSCRIPTS = $(shell find $(PLOTSCRIPTSDIR) -type f -executable)
-# only the names
+PLOTSCRIPTS = $(shell $(PLOTSCRIPTS_FIND_CMD)) # only the names
 PLOTNAMES = $(basename $(notdir $(PLOTSCRIPTS)))
 
 # the corresponding plot names
@@ -18,8 +18,7 @@ PLOTFILES = $(addsuffix .png, $(addprefix $(PLOTDIR)/, $(PLOTNAMES)))
 # creates rule to create PLOTFILE with a corresponding plotscript in
 # $(PLOTSCRIPTSDIR) with matching basename
 define create_plot_rule
-$1: $(shell find $(PLOTSCRIPTSDIR) -type f -executable -name '$(
-													basename $(notdir $1))*')
+$1: $(shell $(PLOTSCRIPTS_FIND_CMD) -name '$(basename $(notdir $1))*')
 	$$(realpath $$<) $$(realpath $$(DATAFILE)) $$(abspath $$@)
 endef
 
