@@ -9,6 +9,10 @@ To create plots based on the data, simply run `make` from the repository root.
 The `plots` directory will then be filled with `.png` plot files. If the data
 or the plot scripts change, simply run `make` again.
 
+## Dependencies
+
+The dependencies to create the plots (e.g. programming languages needed) are specified in the `.travis.yml` file.
+
 # Data
 
 The data is stored under the `data` folder in a `.csv`-file. All units are in
