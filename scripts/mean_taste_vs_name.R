@@ -24,20 +24,25 @@ taste_columns = grep(x = colnames(WATER), pattern = "^taste_.+$", value = TRUE)
 WATER$mean_taste = apply(X = as.matrix(sapply(WATER[,taste_columns],as.numeric)), MARGIN = 1, FUN = function(x)mean(x, na.rm=TRUE))
 
 png(filename = PLOTFILE, pointsize = 16, width = 800, height = 600)
+par(mar = c(5,7,2,2) + 0.1 )
 ord <- order(WATER$mean_taste)
 bar_colors <- topo.colors(nrow(WATER))
 if(!is.null(WATER$color)) {
     correct_colors <- grepl(x=WATER$color,pattern="#[a-zA-Z0-9]{6}")
     bar_colors[correct_colors] <- WATER$color[correct_colors]
 }
-barplot(
+bars = barplot(
     height = WATER$mean_taste[ord]
-    , legend.text = WATER$name[ord]
-    , names.arg = WATER$brand
-    , col = bar_colors
+    , names.arg = WATER$brand[ord]
+    , col = bar_colors[ord]
     , horiz = TRUE
     , main = "mean water taste by name"
     , xlab = "mean water taste"
     , xlim = c(0,10)
+    , las = 1
     )
+legend("bottomright"
+    ,legend = rev(WATER$name[ord])
+    ,fill = rev(bar_colors[ord])
+)
 dev.off()

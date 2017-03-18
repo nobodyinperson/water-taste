@@ -14,14 +14,20 @@ PLOTNAMES = $(basename $(notdir $(PLOTSCRIPTS)))
 # the corresponding plot names
 PLOTFILES = $(addsuffix .png, $(addprefix $(PLOTDIR)/, $(PLOTNAMES)))
 
+# function create_plot(PLOTFILE)
+# creates rule to create PLOTFILE with a corresponding plotscript in
+# $(PLOTSCRIPTSDIR) with matching basename
+define create_plot_rule
+$1: $(shell find $(PLOTSCRIPTSDIR) -type f -executable -name '$(
+													basename $(notdir $1))*')
+	$$(realpath $$<) $$(realpath $$(DATAFILE)) $$(abspath $$@)
+endef
+
 .PHONY: all
 all: $(PLOTFILES)
 
-# make one single plot
-$(PLOTFILES): $(PLOTDIR)/%.png : $(PLOTSCRIPTSDIR)/% $(DATAFILE)
-	@echo "### $(notdir $<) output: ###"
-	cd $(dir $@) && $(realpath $<) $(realpath $(DATAFILE)) $(abspath $@)
-	@echo "### $(notdir $<) output end ###"
+# create rules for all PLOTFILES
+$(foreach _, $(PLOTFILES), $(eval $(call create_plot_rule,$_)))
 
 .PHONY: clean
 clean:
