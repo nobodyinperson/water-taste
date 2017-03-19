@@ -53,15 +53,15 @@ for(user_nr in seq.int(along.with = taste_columns)){
         points(x = WATER[,taste_columns[user_nr]]
                ,y = WATER[,mineral_columns[mineral_nr]]
                ,pch = mineral_symbols[mineral_nr]
-               # ,pch = 20
+               ,lwd = 2
                ,col = mineral_colors[mineral_nr]
                ,cex = 2
                )
     }
-    legend(x = "bottomleft", cex= 0.7, 
+    legend(x = "bottomleft", cex= 0.8, 
            legend = minerals, 
            pch = mineral_symbols,
-           # pch = 20, 
+           # lwd = 3,
            col = mineral_colors, 
            box.col = NA, bg = NA)
 }
