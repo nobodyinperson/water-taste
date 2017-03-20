@@ -1,5 +1,5 @@
 name,color,brand,bottle_liters,bottle_material,gas,min_natrium,min_kalium,min_nitrat,min_magnesium,min_calcium,min_chlorid,min_sulfat,min_fluorid,min_hydrogencarbonat,taste_nobodyinperson,taste_groovygregor
-Rewe Beste Wahl Aqua Mia classic,#66A8DF,Rewe,1,plastic,true,18,5,NA,64,500,29,1130,NA,414,3,NA
+Rewe Beste Wahl Aqua Mia classic,#66A8DF,Rewe,1,plastic,true,18,5,NA,64,500,29,1130,NA,414,3,4
 Gut&Günstig Mineralwasser m.Ks. MEDIUM,#9DFFEF,Gut&Günstig,1.5,plastic,true,7.7,0.6,NA,2.5,67.8,14.2,43,0.06,157,6,NA
 Bismarck Mineralwasser MEDIUM,#124CFF,Bismarck,1,plastic,true,10.2,NA,NA,4,60.8,14.9,NA,NA,188,7,NA
 Gerolsteiner Sprudel,#09927D,Gerolsteiner,0.5,plastic,true,118,11,NA,108,348,40,38,NA,1816,2,NA
