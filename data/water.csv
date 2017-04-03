@@ -1,7 +1,10 @@
 name,color,brand,bottle_liters,bottle_material,gas,min_natrium,min_kalium,min_nitrat,min_magnesium,min_calcium,min_chlorid,min_sulfat,min_fluorid,min_hydrogencarbonat,taste_nobodyinperson,taste_groovygregor
 Rewe Beste Wahl Aqua Mia classic,#66A8DF,Rewe,1,plastic,true,18,5,NA,64,500,29,1130,NA,414,3,4
+Trendic naturell Marinus-Quelle,#D43131,Trendic,1.5,plastic,false,7.7,NA,NA,2.5,67.8,14.2,43,NA,157,7,7
 Gut&Günstig Mineralwasser m.Ks. MEDIUM,#9DFFEF,Gut&Günstig,1.5,plastic,true,7.7,0.6,NA,2.5,67.8,14.2,43,0.06,157,6,NA
-Bismarck Mineralwasser MEDIUM,#124CFF,Bismarck,1,plastic,true,10.2,NA,NA,4,60.8,14.9,NA,NA,188,7,NA
+Bismarck Mineralwasser still Gl.,#0C7800,Bismarck,1,glas,false,10.2,NA,NA,4,60.8,14.9,14,NA,188,9,8
+Bismarck Mineralwasser still Pl.,#124CFF,Bismarck,1,plastic,false,10.2,NA,NA,4,60.8,14.9,14,NA,188,8,8
+Bismarck Mineralwasser MEDIUM,#124CFF,Bismarck,1,plastic,true,10.2,NA,NA,4,60.8,14.9,14,NA,188,7,NA
 Gerolsteiner Sprudel,#09927D,Gerolsteiner,0.5,plastic,true,118,11,NA,108,348,40,38,NA,1816,2,NA
 LIDL Saskia Classic,#14174D,Saskia,1.5,plastic,true,9.6,NA,1,15.5,87.4,NA,NA,NA,351,5,NA
-BergQuelle Mineralwasser Medium,#135100,BergQuelle,0.75,glas,true,12.7,2.1,NA,23.6,34.5,9.5,8.9,NA,231.0,4,NA
+BergQuelle Mineralwasser Medium,#135100,BergQuelle,0.75,glas,true,12.7,2.1,NA,23.6,34.5,9.5,8.9,NA,231,4,NA
