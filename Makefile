@@ -18,7 +18,7 @@ PLOTFILES = $(addsuffix .png, $(addprefix $(PLOTDIR)/, $(PLOTNAMES)))
 # creates rule to create PLOTFILE with a corresponding plotscript in
 # $(PLOTSCRIPTSDIR) with matching basename
 define create_plot_rule
-$1: $(shell $(PLOTSCRIPTS_FIND_CMD) -name '$(basename $(notdir $1))*')
+$1: $(shell $(PLOTSCRIPTS_FIND_CMD) -name '$(basename $(notdir $1))*') $(DATAFILE)
 	$$(realpath $$<) $$(realpath $$(DATAFILE)) $$(abspath $$@)
 endef
 
