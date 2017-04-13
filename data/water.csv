@@ -1,5 +1,6 @@
 name,color,brand,bottle_liters,bottle_material,gas,min_natrium,min_kalium,min_nitrat,min_magnesium,min_calcium,min_chlorid,min_sulfat,min_fluorid,min_hydrogencarbonat,taste_nobodyinperson,taste_groovygregor,taste_silke
 Rewe Beste Wahl Aqua Mia classic,#66A8DF,Rewe,1,plastic,true,18,5,NA,64,500,29,1130,NA,414,3,4,NA
+Rewe Beste Wahl Aqua Mia still,#FF0000,Rewe,0.5,plastic,false,18,5,NA,64,500,29,1130,NA,414,NA,NA,3
 Trendic naturell Marinus-Quelle,#D43131,Trendic,1.5,plastic,false,7.7,NA,NA,2.5,67.8,14.2,43,NA,157,7,7,NA
 Gut&Günstig Mineralwasser m.Ks. MEDIUM,#9DFFEF,Gut&Günstig,1.5,plastic,true,7.7,0.6,NA,2.5,67.8,14.2,43,0.06,157,6,NA,NA
 Bismarck Mineralwasser still Gl.,#0C7800,Bismarck,1,glas,false,10.2,NA,NA,4,60.8,14.9,14,NA,188,9,8,NA
